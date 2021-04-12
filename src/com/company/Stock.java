@@ -8,11 +8,14 @@ import java.net.http.HttpResponse;
 
 
 public class Stock {
+
+
     public Double cash;
     public Double gain;
     public String stockSymbol;
     public Double  stockPrice;
     public Double share;
+
 
     public Stock() {
        cash = 10000.00;
@@ -31,7 +34,7 @@ public class Stock {
     }
 
     public Double request() throws IOException, InterruptedException {
-        stockSymbol = "GME";
+        stockSymbol = "NIO";
         if( cash == 0.0 || stockSymbol == null){
             return null;
         }
@@ -74,7 +77,9 @@ public class Stock {
         System.out.println(price);
         return true;
     }
-
+    public Double getCash() {
+        return cash;
+    }
     public Double getGain() {
         return gain;
     }
